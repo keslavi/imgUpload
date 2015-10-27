@@ -15,6 +15,7 @@ namespace web
         public Startup(IHostingEnvironment env)
         {
 	       // env.UseWelcomePage();
+
         }
 
         // This method gets called by a runtime.
