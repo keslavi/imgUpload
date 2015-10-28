@@ -15,7 +15,7 @@ namespace web.Controllers
         // GET: /<controller>/
 		[HttpGet]
         public IActionResult Index()
-        {
+		{
 			var m =new Model1();
             return View(m);
         }

@@ -4,21 +4,17 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
+
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>bd200c4a-1149-42ed-abff-8ca0f7cea465</ProjectGuid>
-    <RootNamespace>web</RootNamespace>
+    <ProjectGuid>997bad9b-3a7c-40a4-ae88-2413ea44ceb3</ProjectGuid>
+    <RootNamespace>zTest</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">..\..\artifacts\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">..\..\artifacts\bin\$(MSBuildProjectName)\</OutputPath>
   </PropertyGroup>
+
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
-    <DevelopmentServerPort>56093</DevelopmentServerPort>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.Documents\NetHealth.WoundExpert.Documents.csproj" />
-    <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.DocumentUtilities\NetHealth.WoundExpert.DocumentUtilities.csproj" />
-    <ProjectReference Include="..\..\z2\z2.csproj" />
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
