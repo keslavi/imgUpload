@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Http;
 using Microsoft.AspNet.Mvc;
 using Microsoft.CodeAnalysis.CSharp;
-//using NetHealth.WoundExpert.DocumentUtilities;
-//using NetHealth.WoundExpert.Documents;
+using System.Text;
+using NetHealth.WoundExpert.DocumentUtilities;
+using NetHealth.WoundExpert.Documents;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -19,16 +20,23 @@ namespace web.Controllers
 		[HttpGet]
 		public IEnumerable<string> Get()
 		{
-			return new string[] { "value1", "value2" };
+			return new string[] { "value1", "" };
 		}
 
-		// GET api/values/5
-		[HttpGet("{id}")]
-		public string Get(int id)
-		{
-			//var doc=DocumentLibrary.Load<WoundAssessmentDocument>(234058);
+		//// GET api/values/5
+		//[HttpGet("{id}")]
+		//public string Get(int id)
+		//{
+		//	var doc=DocumentLibrary.Load<WoundAssessmentDocument>(234058);
 
-			return "return=" + id.ToString();
+		//	return "return=" + id.ToString();
+		//}
+
+		[HttpGet("{id}")]
+		public ActionResult Get(int id)
+		{
+			var doc = DocumentLibrary.Load<WoundAssessmentDocument>(234058);
+			return Json(doc);
 		}
 
 		// POST api/values

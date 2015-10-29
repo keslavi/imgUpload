@@ -1,36 +1,39 @@
 {
-    "commands": {
-        "web": "Microsoft.AspNet.Hosting --config hosting.ini"
-    },
-    "dependencies": {
-        "Microsoft.AspNet.Mvc": "6.0.0-beta6",
-        "Microsoft.AspNet.Server.IIS": "1.0.0-beta6",
-        "Microsoft.AspNet.Server.WebListener": "1.0.0-beta6",
-        "Microsoft.AspNet.StaticFiles": "1.0.0-beta6",
-        "Microsoft.AspNet.Diagnostics": "1.0.0-beta6"
-    },
-    "exclude": [
-        "wwwroot",
-        "node_modules",
-        "bower_components"
-    ],
-    "frameworks": {
-        "dnx451": {
-            "dependencies": {
-                "z2": "1.0.0-*",
-                "NetHealth.WoundExpert.DocumentUtilities": { },
-                "NetHealth.WoundExpert.Documents": "1.0.0-*"
-            }
-        },
-        "dnxcore50": { }
-    },
-    "publishExclude": [
-        "node_modules",
-        "bower_components",
-        "**.xproj",
-        "**.user",
-        "**.vspscc"
-    ],
-    "version": "1.0.0-*",
-    "webroot": "wwwroot"
+	"commands": {
+		"web": "Microsoft.AspNet.Hosting --config hosting.ini"
+	},
+	"dependencies": {
+		"Microsoft.AspNet.Mvc": "6.0.0-beta6",
+		"Microsoft.AspNet.Server.IIS": "1.0.0-beta6",
+		"Microsoft.AspNet.Server.WebListener": "1.0.0-beta6",
+		"Microsoft.AspNet.StaticFiles": "1.0.0-beta6",
+		"Microsoft.AspNet.Diagnostics": "1.0.0-beta6"
+	},
+	"exclude": [
+		"wwwroot",
+		"node_modules",
+		"bower_components"
+	],
+	"frameworks": {
+		"dnx451": {
+			"dependencies": {
+				"NetHealth.WoundExpert.Collections": "1.0.0-*",
+				"NetHealth.WoundExpert.Documents": "1.0.0-*",
+				"NetHealth.WoundExpert.DocumentUtilities": "1.0.0-*",
+				"NetHealth.WoundExpert.Settings": "1.0.0-*",
+				"NetHealth.WoundExpert.SessionManagement": "1.0.0-*",
+				"NetHealth.WoundExpert.DataAccess": "1.0.0-*",
+				"NetHealth.WoundExpert.ExtensionMethods": "1.0.0-*"
+			}
+		}
+	},
+	"publishExclude": [
+		"node_modules",
+		"bower_components",
+		"**.xproj",
+		"**.user",
+		"**.vspscc"
+	],
+	"version": "1.0.0-*",
+	"webroot": "wwwroot"
 }

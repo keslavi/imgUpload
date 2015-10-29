@@ -16,8 +16,13 @@
     <DevelopmentServerPort>56093</DevelopmentServerPort>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.Collections\NetHealth.WoundExpert.Collections.csproj" />
+    <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.DataAccess\NetHealth.WoundExpert.DataAccess.csproj" />
     <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.Documents\NetHealth.WoundExpert.Documents.csproj" />
     <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.DocumentUtilities\NetHealth.WoundExpert.DocumentUtilities.csproj" />
+    <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.ExtensionMethods\NetHealth.WoundExpert.ExtensionMethods.csproj" />
+    <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.SessionManagement\NetHealth.WoundExpert.SessionManagement.csproj" />
+    <ProjectReference Include="..\..\..\imgUpload_Iheal\NetHealth.WoundExpert.Settings\NetHealth.WoundExpert.Settings.csproj" />
     <ProjectReference Include="..\..\z2\z2.csproj" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
