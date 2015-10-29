@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net46": {
+      "wrappedProject": "../../../imgUpload_Iheal/NetHealth.WoundExpert.DataAccess/NetHealth.WoundExpert.DataAccess.csproj",
+      "bin": {
+        "assembly": "../../../imgUpload_Iheal/NetHealth.WoundExpert.DataAccess/obj/{configuration}/NetHealth.WoundExpert.DataAccess.dll",
+        "pdb": "../../../imgUpload_Iheal/NetHealth.WoundExpert.DataAccess/obj/{configuration}/NetHealth.WoundExpert.DataAccess.pdb"
+      }
+    },
+    "net45": {
+      "wrappedProject": "../../../imgUpload_Iheal/NetHealth.WoundExpert.DataAccess/NetHealth.WoundExpert.DataAccess.csproj",
+      "bin": {
+        "assembly": "../../../imgUpload_Iheal/NetHealth.WoundExpert.DataAccess/obj/{configuration}/NetHealth.WoundExpert.DataAccess.dll",
+        "pdb": "../../../imgUpload_Iheal/NetHealth.WoundExpert.DataAccess/obj/{configuration}/NetHealth.WoundExpert.DataAccess.pdb"
+      }
+    }
+  }
+}
