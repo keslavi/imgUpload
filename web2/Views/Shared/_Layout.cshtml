@@ -25,6 +25,19 @@
 	<meta name="viewport" content="width=device-width" />
 	<title>@ViewBag.Title</title>
 
+	<script src="@Url.Content("~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script>window.jQuery || document.write('<script src="@Url.Content("~/js/vendor/jquery-1.11.2.min.js")" ><\/script>')</script>
+	<script src="@Url.Content("~/js/vendor/bootstrap.min.js")"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script src="@Url.Content("~/js/message.js")"></script>
+	<script src="@Url.Content("~/js/main.js")"></script>
+	@RenderSection("Scripts", required: false)
+
+
+
+
 </head>
 <body>
 	<!--[if lt IE 8]>
@@ -54,17 +67,10 @@
 			</div><!--/.navbar-collapse -->
 		</div>
 	</nav>
-	<div>
+<div>
+	<form>
 		@RenderBody()
-	</div>
-	<script src="@Url.Content("~/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-	<script>window.jQuery || document.write('<script src="@Url.Content("~/js/vendor/jquery-1.11.2.min.js")" ><\/script>')</script>
-	<script src="@Url.Content("~/js/vendor/bootstrap.min.js")"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-	<script src="@Url.Content("~/js/message.js")"></script>
-	<script src="@Url.Content("~/js/main.js")"></script>
-	@RenderSection("Scripts", required: false)
+	</form>
+</div>
 </body>
 </html>
