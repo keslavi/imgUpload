@@ -3,6 +3,25 @@
   "version": 1,
   "targets": {
     "DNX,Version=v4.5.1": {
+      "ClassLibrary1/1.0": {
+        "dependencies": {
+          "CodicePlastico": "1.0.0.0"
+        },
+        "compile": {
+          "lib/net40/ClassLibrary1.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ClassLibrary1.dll": {}
+        }
+      },
+      "CodicePlastico/1.0.0.0": {
+        "compile": {
+          "lib/CodicePlastico.dll": {}
+        },
+        "runtime": {
+          "lib/CodicePlastico.dll": {}
+        }
+      },
       "Microsoft.AspNet.Antiforgery/1.0.0-beta6": {
         "dependencies": {
           "Microsoft.AspNet.DataProtection": "1.0.0-beta6",
@@ -1246,6 +1265,26 @@
     }
   },
   "libraries": {
+    "ClassLibrary1/1.0": {
+      "sha512": "DAxt/84BvnavFpj7/lr5hgxOMQcTVcA6U5DycCNZMikcFs1QDNOLpvRaThDZSanuneMDfDTZ2mtIL0//0q1ekg==",
+      "files": [
+        "ClassLibrary1.1.0.0.nupkg",
+        "ClassLibrary1.1.0.0.nupkg.sha512",
+        "ClassLibrary1.nuspec",
+        "lib/net40/ClassLibrary1.dll"
+      ]
+    },
+    "CodicePlastico/1.0.0.0": {
+      "sha512": "2sQ1VaPatrRpG1EeDHWAZpUADdFrc3TXQvjPnl3IepeNsDHubcmEeLor2Bj7k54wW/ImotMoY9Hs9ozCK03Y8Q==",
+      "files": [
+        "CodicePlastico.1.0.0.nupkg",
+        "CodicePlastico.1.0.0.nupkg.sha512",
+        "CodicePlastico.nuspec",
+        "lib/AssemblyInfo.cs",
+        "lib/CodicePlastico.dll",
+        "lib/WhoIs.cs"
+      ]
+    },
     "Microsoft.AspNet.Antiforgery/1.0.0-beta6": {
       "serviceable": true,
       "sha512": "1L0MAy0A+Lc5zMAyr/tg78Lbk/ZdaRVEqf5F7zkG3oEqzQeMqK0tdYNDQce23egEBFTqw9ZEh5dcODL+I+f5sA==",

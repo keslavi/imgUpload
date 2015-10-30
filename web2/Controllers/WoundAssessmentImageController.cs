@@ -25,12 +25,14 @@ namespace web2.Controllers
 		public ActionResult Get(int id)
 		{
 			//int id = 234058;
-			woundAssessmentImage doc = null;
-			using (var db = new Repository.WoundAssessmentRepository())
-			{
-				doc = db.Get(id);
-			}
-			return View("Index",doc);
+			//woundAssessmentImage doc = null;
+			//using (var db = new Repository.WoundAssessmentRepository())
+			//{
+			//	doc = db.Get(id);
+			//}
+			//return View("Index",doc);
+			ViewBag.idAssessment = id;
+			return View("Index");
 		}
 		[HttpPost]
 		public ActionResult Post(int assessmentId)

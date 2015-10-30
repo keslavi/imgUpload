@@ -45,14 +45,15 @@ namespace web2.Controllers
 			return json;
 		}
 
-	    //[HttpPost]
-	    //public JToken Post([FromBody] woundAssessmentImage value )
-	    //{
+		[HttpPost]
+		public JToken Post(dynamic model)
+		{
 
+			var ret=new message() {status="failed"};
+			
 
-		    
-
-	    //}
+			return JObject.Parse(JsonConvert.SerializeObject(ret));
+		}
 
 		[Serializable]
 		public class message

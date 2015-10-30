@@ -26,7 +26,7 @@ namespace web2.Models
 	public class image
 	{
 		public int number { get; set; }
-		public byte[] data { get; set; }
+		public string data { get; set; }//byte[]
 	}
 }
 

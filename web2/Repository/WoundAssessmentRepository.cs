@@ -29,8 +29,8 @@ namespace web2.Repository
 			var doc = DocumentLibrary.Load<WoundAssessmentDocument>(id, false);
 			
 			var imgList = new List<image>();
-			imgList.Add(new image() { number = 1, data = GetBytes("test clear") });
-			imgList.Add(new image() { number = 2, data = GetBytes("test clear") });
+			imgList.Add(new image() {number = 1, data = "hi"});// data = GetBytes("test clear") });
+			imgList.Add(new image() { number = 2, data = "hi" });// data = GetBytes("test clear") });
 			var o = new woundAssessmentImage()
 			{
 				document = doc,
