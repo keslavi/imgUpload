@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model web2.Models.woundAssessmentImage
+
+@{
+	ViewBag.Title = "Upload Image";
+	//Layout = "_Layout";
+}
+
+@using (Html.BeginForm())
+{
+	<section>
+		<p>
+			@Html.LabelFor(m => m.patientName, new {@class = "m_Patient"})
+			<span class="m_Patient">@Html.DisplayFor(m => m.patientName, new {@class = "m_Patient"})</span>
+		</p>
+		<p>
+			@Html.LabelFor(m => m.dos)
+			@Html.DisplayFor(m => m.dos)
+		</p>
+		<p>
+			@Html.LabelFor(m => m.woundNumber)
+			@Html.DisplayFor(m => m.woundNumber)
+		</p>
+		<p>
+			@Html.LabelFor(m => m.length)
+			@Html.TextBoxFor(m => m.length)
+		</p>
+		<p>
+			@Html.LabelFor(m => m.width)
+			@Html.TextBoxFor(m => m.width)
+		</p>
+		<p>
+			@Html.LabelFor(m => m.depth)
+			@Html.TextBoxFor(m => m.depth)
+		</p>
+		<p>
+			@*@Html.LabelFor(m => m.Area)
+		@Html.DisplayFor(m => m.Area)
+		@Html.LabelFor(m => m.Volume)
+		@Html.DisplayFor(m => m.Volume)*@
+		</p>
+		<p/>
+		<p>
+			<img id="display" src="#" alt="uploaded image"/>
+		</p>
+		<button type="submit" class="btn btn-success" onclick="LaunchCamera(); return false;">Upload Image</button>
+		<input id="uploadImg" type="file" accept="image/*" capture="camera" hidden="hidden" onchange="HandleFileSelect(this);"/>
+	</section>
+}
+
+@section Scripts {
+	<script>
+		function LaunchCamera() {
+			$("#uploadImg").click();
+		}
+
+		function HandleFileSelect(input) {
+			if (input.files && input.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function(e) {
+					$("#display")
+						.attr("src", e.target.result)
+						.width(150)
+						.height(200);
+				}
+
+				reader.readAsDataURL(input.files[0]);
+				$("#display").show();
+			} else {
+				$("#display").attr("src", "#");
+				$("#display").hide();
+			}
+		}
+	</script>
+	<input type="submit"/>
+}

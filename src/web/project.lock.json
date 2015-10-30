@@ -2307,13 +2307,7 @@
       "Microsoft.AspNet.Diagnostics >= 1.0.0-beta6"
     ],
     "DNX,Version=v4.5.1": [
-      "NetHealth.WoundExpert.Collections >= 1.0.0-*",
-      "NetHealth.WoundExpert.Documents >= 1.0.0-*",
-      "NetHealth.WoundExpert.DocumentUtilities >= 1.0.0-*",
-      "NetHealth.WoundExpert.Settings >= 1.0.0-*",
-      "NetHealth.WoundExpert.SessionManagement >= 1.0.0-*",
-      "NetHealth.WoundExpert.DataAccess >= 1.0.0-*",
-      "NetHealth.WoundExpert.ExtensionMethods >= 1.0.0-*"
+      "ClassLibrary1 >= 1.0.0-*"
     ]
   }
 }
