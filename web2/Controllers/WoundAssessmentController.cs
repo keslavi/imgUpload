@@ -30,9 +30,9 @@ namespace web2.Controllers
 		}
 
 		[HttpGet]
-		public JToken Get()
+		public JToken Get(int id)
 		{
-			int id = 234058;
+//			int id = 234058;
             woundAssessmentImage doc = null;
 			using (var db = new Repository.WoundAssessmentRepository())
 			{
@@ -49,7 +49,7 @@ namespace web2.Controllers
 		public JToken Post(dynamic model)
 		{
 
-			var ret=new message() {status="failed"};
+			var ret=new message() {status="receiving data but need to finish writing"};
 			
 
 			return JObject.Parse(JsonConvert.SerializeObject(ret));
