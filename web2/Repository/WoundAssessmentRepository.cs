@@ -27,9 +27,9 @@ namespace web2.Repository
 		public web2.Models.woundAssessmentImage Get(int id)
 		{
 			var doc = DocumentLibrary.Load<WoundAssessmentDocument>(id, false);
-			
+
 			var imgList = new List<image>();
-			imgList.Add(new image() {number = 1, data = "hi"});// data = GetBytes("test clear") });
+			imgList.Add(new image() { number = 1, data = "hi" });// data = GetBytes("test clear") });
 			imgList.Add(new image() { number = 2, data = "hi" });// data = GetBytes("test clear") });
 			var o = new woundAssessmentImage()
 			{
@@ -38,8 +38,10 @@ namespace web2.Repository
 				photoKey = doc.PhotoKey,
 				woundId = doc.WoundID.GetValueOrDefault(),
 				images = imgList,
-				patientName = doc.Properties.Patient.LastName + ", " + doc.Properties.Patient.FirstName, woundNumber = 1
-				,dos = doc.Properties.DocumentDate
+				patientName = doc.Properties.Patient.LastName + ", " + doc.Properties.Patient.FirstName,
+				woundNumber = 1
+				,
+				dos = doc.Properties.DocumentDate
 			};
 
 			return o;
