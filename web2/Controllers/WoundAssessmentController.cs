@@ -10,6 +10,10 @@ using NetHealth.WoundExpert.Documents;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using web2.Models;
+using System.Drawing;
+using System.IO;
+using System.Drawing.Imaging;
+using System.Text;
 
 namespace web2.Controllers
 {
@@ -46,13 +50,37 @@ namespace web2.Controllers
 		}
 
 		[HttpPost]
-		public JToken Post(dynamic model)
+		public JToken Post([FromBody] woundAssessmentImage model)
 		{
+			//StringBuilder sb = new StringBuilder();
+			//if (model != null)
+			//{
+			//	Base64ToImage(model.imageData);
+			//	if (model.images != null)
+			//	{
+			//		sb.Append("Images list object not null");
+			//	}
+			//	else
+			//		sb.Append("Images list object is null");
+			//}
 
-			var ret=new message() {status="failed"};
+			var ret=new message() {status= (model == null) ? "failed" : "passed " + JsonConvert.SerializeObject(model).ToString()};
 			
 
 			return JObject.Parse(JsonConvert.SerializeObject(ret));
+		}
+
+		private static void Base64ToImage(string base64String)
+		{
+			// Convert Base64 String to byte[]
+			byte[] imageBytes = Convert.FromBase64String(base64String);
+			using (MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length))
+			{
+				// Convert byte[] to Image
+				ms.Write(imageBytes, 0, imageBytes.Length);
+				Image image = Image.FromStream(ms, true);
+				image.Save(@"C:\Projects\temp\TempImage_BackFromServer.jpg", ImageFormat.Jpeg);
+			}
 		}
 
 		[Serializable]
